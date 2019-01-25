@@ -1,0 +1,74 @@
+
+
+   /*Прогамма виводить в консоль імя та призвіще викладача
+     кількість студентів присутніх на парі
+     та пропонує обрати старосту*/
+
+
+
+
+import java.util.Scanner;
+
+ class StudensHead  {
+    void head1()
+    {System.out.println("Sergey");}
+    void head2()
+    {System.out.println("Matvey");}
+    void head3()
+    {System.out.println("Alixey");}
+
+}
+
+
+
+
+ class Professor {
+    void name() {
+        System.out.println("Professor name is Fedor Emilyanov");
+
+    }
+}
+
+
+public class StudentAbsent {
+    public static void main(String[] args) {
+        Professor name1 = new Professor();
+        name1.name();
+        System.out.println("Enter the number of students attending the lecture:");
+        Scanner in = new Scanner(System.in);
+        int x = 30;
+        int input = in.nextInt();
+        if(input < 0 || input > 30)
+            System.out.println("Total number of students is 30!");
+
+            else if (input == 30)
+                System.out.println("All students attend on lecture");
+
+            else
+                System.out.println((x - input) + " students are absent");
+
+            System.out.println("Pleas choice head of the group by the next specifications:");
+            System.out.println("1. Smart");
+            System.out.println("2. Very smart");
+            System.out.println("3. Too smart");
+            System.out.println("Please enter 1, 2 or 3");
+            Scanner in1 = new Scanner(System.in);
+            int input1 = in.nextInt();
+                if (input1<0 || input1 >3){
+                    System.out.println("Please enter 1, 2 or 3");}
+
+                else if (input1 == 1){
+
+                    StudensHead head1 = new StudensHead();
+                    head1.head1();}
+
+                else if (input1 == 2){
+                    StudensHead head2 = new StudensHead();
+                    head2.head2();}
+
+                else if (input1 == 3){
+                    StudensHead head3 = new StudensHead();
+                    head3.head3();
+                }
+        }
+    }
